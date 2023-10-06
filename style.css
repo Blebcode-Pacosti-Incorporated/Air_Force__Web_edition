@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'Russian font';
+	src: url('static/font/font-1.ttf') format("truetype");
+}
+@font-face {
+	font-family: 'Russian font pixel';
+	src: url('static/font/font-2.ttf') format("truetype");
+}
+
+
+body {
+	margin: 0;
+	font-family: 'Russian font';
+  /*overflow-y: hidden;*/
+}
+#game-canvas {
+  margin: 0;
+}
+.screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+}
+
+.btn {
+  /*position: absolute;*/
+  top: 0px;
+  left: 0px;
+  user-select: none;
+  cursor: pointer;
+  display: inline;
+  padding: 10px 50px;
+  border-radius: 7px;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  background: #383540;
+  background: linear-gradient(0deg, rgba(56,53,64,1) 35%, rgba(69,67,79,1) 100%);
+}
+.btn:hover {
+  background: #44414e;
+  background: linear-gradient(0deg, rgba(68,65,78,1) 35%, rgba(71,68,80,1) 100%);
+}
+.btn:active {
+  background: #0e0e10;
+  background: linear-gradient(0deg, rgba(52,49,58,1) 0%, rgba(14,14,16,1) 100%);
+}
+
+/* system */
+.vertical-center {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.horizontal-center {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.horizontal-around {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+.horizontal-evenly {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}

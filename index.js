@@ -1,7 +1,3 @@
-function S(key) {
-    return document.querySelector(key)
-}
-
 const config = {
     background: {
         main_menu: {

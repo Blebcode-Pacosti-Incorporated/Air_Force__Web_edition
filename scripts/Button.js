@@ -17,6 +17,17 @@ class Button {
 		return div;
 	}
 
+	remove() {
+		this.button.remove();
+	}
+}
+class ButtonWrap {
+	constructor (buttons) {
+		if(Array.isArray(button)
+			this.buttons = button;
+		else
+			this.buttons = [button];
+	}
 	setVerticalCentering () {
 		this.parent.classList.add('vertical-center')
 	}

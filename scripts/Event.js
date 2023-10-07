@@ -1,4 +1,5 @@
 class EventDispatcher {
+	static print_log = false
 	static #events = [];
 	static #handlers = {};
 
@@ -11,12 +12,13 @@ class EventDispatcher {
 	static handleEvents() {
 		let i = 0
 		for (let event of EventDispatcher.#events) {
-			console.log('[EVENT]: ', event)
+			if (this.print_log)
+				console.log(`[EVENT]: <${event.eventName}>`, event)
 			if (EventDispatcher.#handlers[event.eventName])
 				for (let handler of EventDispatcher.#handlers[event.eventName])
 					if (handler.emitter == event.eventObject)
-						handler(event);
-			EventDispatcher.#events
+						handler.handler(event);
+			EventDispatcher.#events.splice(i, 1);
 		}
 	}
 
